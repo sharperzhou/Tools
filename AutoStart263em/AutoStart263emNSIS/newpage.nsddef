@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file was created by NSISDialogDesigner 1.4.0.0
+http://coolsoft.altervista.org/nsisdialogdesigner
+Do not edit manually!
+-->
+<Dialog Name="newpage" Title="配置参数" Subtitle="选择263云通信的安装位置及设置定时时间。">
+  <Label Name="lbl_263EMdir" Location="12, 14" Size="100, 20" Text="263EM安装路径" TabIndex="0" />
+  <FileRequest Name="FR_263EMdir" Location="12, 37" Size="426, 20" Text="C:\Program Files\263 Enterprise Messenger\263em.exe" TabIndex="1" Filter="263em.exe|263em.exe" />
+  <GroupBox Name="GB_timeset" Location="12, 74" Size="426, 65" Text="定时设置" TabIndex="2">
+    <Number Name="N_hour" Location="25, 28" Text="8" MaxLength="2" TabIndex="0" />
+    <Label Name="lbl_hour" Location="131, 31" Size="62, 23" Text="时(0-23)" TabIndex="1" />
+    <Number Name="N_minute" Location="199, 28" Text="35" MaxLength="2" TabIndex="2" />
+    <Label Name="lbl_minute" Location="305, 31" Text="分(0-59)" TabIndex="3" />
+  </GroupBox>
+  <Link Name="link_download" Location="12, 173" Size="426, 23" Text="如何未安装263云通信，点击此处下载最新版本。" TabIndex="3" onClick="download_new" />
+</Dialog>
