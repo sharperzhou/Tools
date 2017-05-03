@@ -1,3 +1,3 @@
 # Tools
 
-I will developing small for everyone to use
+I will developing some small tools for everyone to use
