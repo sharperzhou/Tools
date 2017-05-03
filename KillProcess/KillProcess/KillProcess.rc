@@ -1,0 +1,217 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\KillProcess.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KILLPROCESS_DIALOG DIALOGEX 0, 0, 192, 97
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "杀进程"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "根据进程号(PID)或进程名称结束指定的进程。",IDC_STATIC,7,7,165,8
+    CONTROL         "进程号",IDC_RD_PID,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,30,40,10
+    CONTROL         "进程名",IDC_RD_NAME,"Button",BS_AUTORADIOBUTTON,7,39,40,10
+    EDITTEXT        IDC_EDIT_CONTENT,46,30,129,19,ES_AUTOHSCROLL
+    PUSHBUTTON      "执行",IDC_BTN_EXEC,18,56,155,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "KillProcess.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "KillProcess.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KILLPROCESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+        HORZGUIDE, 30
+        HORZGUIDE, 49
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RUNASADMIN
+//
+
+IDR_RUNASADMIN RUNASADMIN 
+BEGIN
+    0x3f3c, 0x6d78, 0x206c, 0x6576, 0x7372, 0x6f69, 0x3d6e, 0x3122, 0x302e, 
+    0x2022, 0x6e65, 0x6f63, 0x6964, 0x676e, 0x223d, 0x5455, 0x2d46, 0x2238, 
+    0x7320, 0x6174, 0x646e, 0x6c61, 0x6e6f, 0x3d65, 0x7922, 0x7365, 0x3f22, 
+    0x0a3e, 0x613c, 0x7373, 0x6d65, 0x6c62, 0x2079, 0x6d78, 0x6e6c, 0x3d73, 
+    0x7522, 0x6e72, 0x733a, 0x6863, 0x6d65, 0x7361, 0x6d2d, 0x6369, 0x6f72, 
+    0x6f73, 0x7466, 0x632d, 0x6d6f, 0x613a, 0x6d73, 0x762e, 0x2231, 0x6d20, 
+    0x6e61, 0x6669, 0x7365, 0x5674, 0x7265, 0x6973, 0x6e6f, 0x223d, 0x2e31, 
+    0x2230, 0x203e, 0x200a, 0x3c20, 0x7361, 0x6573, 0x626d, 0x796c, 0x6449, 
+    0x6e65, 0x6974, 0x7974, 0x7620, 0x7265, 0x6973, 0x6e6f, 0x223d, 0x2e31, 
+    0x2e30, 0x2e30, 0x2230, 0x200a, 0x2020, 0x2020, 0x7270, 0x636f, 0x7365, 
+    0x6f73, 0x4172, 0x6372, 0x6968, 0x6574, 0x7463, 0x7275, 0x3d65, 0x5822, 
+    0x3638, 0x0a22, 0x2020, 0x2020, 0x6e20, 0x6d61, 0x3d65, 0x4122, 0x796e, 
+    0x614e, 0x656d, 0x6f59, 0x5775, 0x6e61, 0x2274, 0x200a, 0x2020, 0x2020, 
+    0x7974, 0x6570, 0x223d, 0x6977, 0x336e, 0x2232, 0x3e2f, 0x0a20, 0x2020, 
+    0x643c, 0x7365, 0x7263, 0x7069, 0x6974, 0x6e6f, 0x443e, 0x7365, 0x7263, 
+    0x7069, 0x6974, 0x6e6f, 0x6f20, 0x2066, 0x6f79, 0x7275, 0x6120, 0x7070, 
+    0x696c, 0x6163, 0x6974, 0x6e6f, 0x2f3c, 0x6564, 0x6373, 0x6972, 0x7470, 
+    0x6f69, 0x3e6e, 0x0a20, 0x2020, 0x213c, 0x2d2d, 0x4920, 0x6564, 0x746e, 
+    0x6669, 0x2079, 0x6874, 0x2065, 0x7061, 0x6c70, 0x6369, 0x7461, 0x6f69, 
+    0x206e, 0x6573, 0x7563, 0x6972, 0x7974, 0x7220, 0x7165, 0x6975, 0x6572, 
+    0x656d, 0x746e, 0x2e73, 0x2d20, 0x3e2d, 0x200a, 0x3c20, 0x7274, 0x7375, 
+    0x4974, 0x666e, 0x206f, 0x6d78, 0x6e6c, 0x3d73, 0x7522, 0x6e72, 0x733a, 
+    0x6863, 0x6d65, 0x7361, 0x6d2d, 0x6369, 0x6f72, 0x6f73, 0x7466, 0x632d, 
+    0x6d6f, 0x613a, 0x6d73, 0x762e, 0x2232, 0x0a3e, 0x2020, 0x2020, 0x733c, 
+    0x6365, 0x7275, 0x7469, 0x3e79, 0x200a, 0x2020, 0x2020, 0x3c20, 0x6572, 
+    0x7571, 0x7365, 0x6574, 0x5064, 0x6972, 0x6976, 0x656c, 0x6567, 0x3e73, 
+    0x200a, 0x2020, 0x2020, 0x2020, 0x3c20, 0x6572, 0x7571, 0x7365, 0x6574, 
+    0x4564, 0x6578, 0x7563, 0x6974, 0x6e6f, 0x654c, 0x6576, 0x0a6c, 0x2020, 
+    0x2020, 0x2020, 0x2020, 0x2020, 0x656c, 0x6576, 0x3d6c, 0x7222, 0x7165, 
+    0x6975, 0x6572, 0x6441, 0x696d, 0x696e, 0x7473, 0x6172, 0x6f74, 0x2272, 
+    0x200a, 0x2020, 0x2020, 0x2020, 0x2020, 0x7520, 0x4169, 0x6363, 0x7365, 
+    0x3d73, 0x6622, 0x6c61, 0x6573, 0x2f22, 0x0a3e, 0x2020, 0x2020, 0x2020, 
+    0x2020, 0x2f3c, 0x6572, 0x7571, 0x7365, 0x6574, 0x5064, 0x6972, 0x6976, 
+    0x656c, 0x6567, 0x3e73, 0x200a, 0x2020, 0x2020, 0x2020, 0x2f3c, 0x6573, 
+    0x7563, 0x6972, 0x7974, 0x0a3e, 0x2020, 0x2f3c, 0x7274, 0x7375, 0x4974, 
+    0x666e, 0x3e6f, 0x3c0a, 0x612f, 0x7373, 0x6d65, 0x6c62, 0x3e79
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ico.ico"
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\KillProcess.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
