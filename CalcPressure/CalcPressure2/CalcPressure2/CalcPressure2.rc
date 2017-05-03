@@ -1,0 +1,195 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_MAIN DIALOGEX 0, 0, 150, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "压力计算"
+MENU IDR_MENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "MPa (表)",IDC_STATIC,7,9,30,8
+    LTEXT           "kPa (真)",IDC_STATIC,7,27,28,8
+    LTEXT           "mm汞柱",IDC_STATIC,7,45,28,8
+    LTEXT           "kPa (绝)",IDC_STATIC,7,63,28,8
+    EDITTEXT        IDC_EDIT_MPAG,41,7,102,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_KPAG,41,25,102,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MMHG,41,43,102,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_KPA,41,61,102,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_SETTING DIALOGEX 0, 0, 186, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "显示方式",IDC_STATIC,7,7,81,46
+    CONTROL         "固定位数",IDC_RD_FIXEDDIGIT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,14,22,48,10
+    CONTROL         "固定长度",IDC_RD_FIXEDLENGTH,"Button",BS_AUTORADIOBUTTON,14,38,48,10
+    GROUPBOX        "显示格式",IDC_STATIC,98,7,81,46
+    LTEXT           "小数位数:",IDC_STATIC,105,21,36,8
+    EDITTEXT        IDC_EDIT_DIGIT,143,19,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "数字长度:",IDC_STATIC_LENGTH,105,38,36,8
+    EDITTEXT        IDC_EDIT_LENGTH,143,35,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "窗口顶置显示",IDC_CHK_ONTOP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,64,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,74,172,1
+    PUSHBUTTON      "确定",IDOK,38,81,50,14
+    DEFPUSHBUTTON   "取消",IDCANCEL,105,81,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DLG_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        VERTGUIDE, 14
+        VERTGUIDE, 88
+        VERTGUIDE, 93
+        VERTGUIDE, 98
+        VERTGUIDE, 105
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    MENUITEM "设置(&S)",                      IDM_SETTING
+    MENUITEM "复制(&C)",                      IDM_COPY
+    MENUITEM "粘贴(&V)",                      IDM_PASTE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON                    "Pa.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "压力计算工具"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "LegalCopyright", "Copyright (C) 周晓春 2017.1"
+            VALUE "ProductName", "压力计算"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
