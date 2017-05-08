@@ -43,6 +43,8 @@ DWORD dwVersion = 0;
 DWORD dwResult = 0;
 PWLAN_HOSTED_NETWORK_REASON pFailReason = NULL;
 HANDLE task_handle = NULL;                                    //循环线程句柄
+wchar_t szWiFiName[32];                                       //WiFi设备名称
+
 
 void Detector();                                              //侦测连接状况
 DWORD WINAPI loop_thread(LPVOID param);                       //循环侦测线程
@@ -264,6 +266,7 @@ HRESULT UnSharingNet()
 HRESULT AddSharingNet()
 {
 	HRESULT hr = 0;
+    
 	while (S_OK == pEV->Next(1, &v, NULL))
 	{
 		if (V_VT(&v) == VT_UNKNOWN)
@@ -285,7 +288,7 @@ HRESULT AddSharingNet()
 				}
 
 				//Share
-				if(strncmp((char*)(pNP->pszwDeviceName),(char*)(L"Microsoft Virtual WiFi Miniport Adapter"), 39)
+				if(wcsncmp(pNP->pszwDeviceName, L"Microsoft Virtual WiFi Miniport Adapter", 39)
 					 && pNP->Status == NCS_CONNECTED)
 				{
 					hr = pNSM->get_INetSharingConfigurationForINetConnection (pNC, &pNSC);
@@ -296,8 +299,10 @@ HRESULT AddSharingNet()
 					shareFlag = 3;
 				}
 				
-				if(!strncmp((char*)(pNP->pszwDeviceName),(char*)(L"Microsoft Virtual WiFi Miniport Adapter"), 39))
+				if(!wcsncmp(pNP->pszwDeviceName, L"Microsoft Virtual WiFi Miniport Adapter", 39))
 				{
+                    wcscpy(szWiFiName, pNP->pszwName);
+
 					hr = pNSM->get_INetSharingConfigurationForINetConnection(pNC, &pNSC);
 					hr = pNSC->EnableSharing(ICSSHARINGTYPE_PRIVATE);
 					if (pNSC) pNSC->Release();
@@ -336,7 +341,7 @@ void Detector()
 					continue;
 				}
 
-				if(!strncmp((char*)(pNP->pszwDeviceName),(char*)(L"Microsoft Virtual WiFi Miniport Adapter"), 39)
+				if(!wcsncmp(pNP->pszwDeviceName, L"Microsoft Virtual WiFi Miniport Adapter", 39)
 					&& pNP->Status != NCS_CONNECTED)
 				{
 					if (connFlag == 0)
@@ -403,6 +408,12 @@ DWORD WINAPI loop_thread(LPVOID param)
 		{
 			UnSharingNet();
 			AddSharingNet();
+            if (shareFlag == 3) { //设置IP
+                wchar_t szCmd[MAX_PATH] = L"netsh interface ip set address \"";
+                wcscat(szCmd, szWiFiName);
+                wcscat(szCmd, L"\" static 192.168.137.1");
+                _wsystem(szCmd);
+            }
 		}
 		else if (shareFlag == 5 && connFlag == 5)
 		{
