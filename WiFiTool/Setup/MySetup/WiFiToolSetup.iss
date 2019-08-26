@@ -20,7 +20,7 @@ AppPublisher={#MyAppPublisher}
 DefaultDirName={pf}\WiFiTool
 DefaultGroupName=WiFiTool
 AllowNoIcons=yes
-OutputDir=E:\MySetup
+OutputDir=.
 OutputBaseFilename=WiFiToolSetup
 Compression=lzma
 SolidCompression=yes
@@ -37,11 +37,11 @@ Name: "chinesesimp"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkedonce ;Components:GUI
 
 [Files]
-Source: "E:\MySetup\WifiTool.exe"; DestDir: "{app}"; Flags: ignoreversion ;Components:GUI 
-Source: "E:\MySetup\WifiToolService.exe"; DestDir: "{app}"; Flags: ignoreversion ;Components:Service
-Source: "E:\MySetup\InstallService.bat"; DestDir: "{app}"; Flags: ignoreversion ;Components:Service
-Source: "E:\MySetup\UninstallService.bat"; DestDir: "{app}"; Flags: ignoreversion ;Components:Service
-Source: "E:\MySetup\WifiToolService.log"; DestDir: "{app}"; Flags: ignoreversion ;Components:Service
+Source: ".\WifiTool.exe"; DestDir: "{app}"; Flags: ignoreversion ;Components:GUI 
+Source: ".\WifiToolService.exe"; DestDir: "{app}"; Flags: ignoreversion ;Components:Service
+Source: ".\InstallService.bat"; DestDir: "{app}"; Flags: ignoreversion ;Components:Service
+Source: ".\UninstallService.bat"; DestDir: "{app}"; Flags: ignoreversion ;Components:Service
+Source: ".\WifiToolService.log"; DestDir: "{app}"; Flags: ignoreversion ;Components:Service
 ; 注意: 不要在任何共享系统文件上使用“Flags: ignoreversion”
 
 [Icons]

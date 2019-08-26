@@ -17,8 +17,8 @@ RequestExecutionLevel admin
 
 ; MUI 预定义常量
 !define MUI_ABORTWARNING
-!define MUI_ICON "E:\安装制作\WiFiToolNSIS\Setup.ico"
-!define MUI_UNICON "E:\安装制作\WiFiToolNSIS\Uninst.ico"
+!define MUI_ICON ".\Setup.ico"
+!define MUI_UNICON ".\Uninst.ico"
 
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
@@ -75,7 +75,7 @@ SectionGroup /e "WiFi工具" SEC01
 		DetailPrint "提示：正在安装WiFi工具..."
 	  SetOutPath "$INSTDIR"
 	  SetOverwrite ifnewer
-	  File "E:\安装制作\WiFiToolNSIS\WifiTool.exe"
+	  File ".\WifiTool.exe"
 	  ;CreateDirectory "$SMPROGRAMS\WiFiTool"
 	  CreateShortCut "$SMPROGRAMS\WiFiTool\WiFi工具.lnk" "$INSTDIR\WifiTool.exe"
   SectionEnd
@@ -91,7 +91,7 @@ Section "WiFi工具服务" SEC02
   DetailPrint "提示：正在安装WiFi工具服务..."
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
-  File "E:\安装制作\WiFiToolNSIS\WifiToolService.exe"
+  File ".\WifiToolService.exe"
 	services::IsServiceInstalled 'WiFi Tool Service'
 	Pop $0
 	${if} $0 == 'Yes'
